@@ -6,390 +6,87 @@
 <title>Livre d'Or — Mariage Yoann & Naomi</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --gold: #B8935A;
-    --gold-light: #E8D5B0;
-    --gold-dark: #8A6B3A;
-    --cream: #FAF7F2;
-    --ink: #1C1812;
-    --ink-soft: #4A4438;
-    --ink-muted: #8A8070;
-    --border: rgba(184,147,90,0.25);
-    --radius: 4px;
-    --rec-red: #B85050;
+    --gold: #B8935A; --gold-light: #E8D5B0; --gold-dark: #8A6B3A;
+    --cream: #FAF7F2; --ink: #1C1812; --ink-soft: #4A4438;
+    --ink-muted: #8A8070; --border: rgba(184,147,90,0.25);
+    --radius: 4px; --rec-red: #B85050;
   }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #FAF7F2;
-    color: var(--ink);
-    min-height: 100vh;
-    padding: 2rem 1rem 4rem;
-  }
-
-  .wrapper {
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  header {
-    text-align: center;
-    padding: 3rem 0 2.5rem;
-    border-bottom: 0.5px solid var(--border);
-    margin-bottom: 2.5rem;
-  }
-
-  .eyebrow {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.25rem;
-  }
-
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: clamp(2.4rem, 8vw, 3.2rem);
-    line-height: 1.1;
-    color: var(--ink);
-    letter-spacing: 0.02em;
-    margin-bottom: 0.75rem;
-  }
-
-  h1 em {
-    font-style: italic;
-    color: var(--gold-dark);
-  }
-
-  .subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: var(--ink-soft);
-    line-height: 1.6;
-  }
-
-  .intro-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--ink-soft);
-    text-align: center;
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
-    padding: 0 0.5rem;
-  }
-
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin: 2rem 0 1.5rem;
-  }
-
-  .divider::before, .divider::after {
-    content: '';
-    flex: 1;
-    height: 0.5px;
-    background: var(--border);
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .field-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  label {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-
+  body { font-family: 'Inter', sans-serif; background: #FAF7F2; color: var(--ink); min-height: 100vh; padding: 2rem 1rem 4rem; }
+  .wrapper { max-width: 560px; margin: 0 auto; }
+  header { text-align: center; padding: 3rem 0 2.5rem; border-bottom: 0.5px solid var(--border); margin-bottom: 2.5rem; }
+  .eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1.1; color: var(--ink); letter-spacing: 0.02em; margin-bottom: 0.75rem; }
+  h1 em { font-style: italic; color: var(--gold-dark); }
+  .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 300; color: var(--ink-soft); line-height: 1.6; }
+  .intro-text { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; color: var(--ink-soft); text-align: center; line-height: 1.7; margin-bottom: 2.5rem; padding: 0 0.5rem; }
+  .divider { display: flex; align-items: center; gap: 1rem; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin: 2rem 0 1.5rem; }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 0.5px; background: var(--border); }
+  form { display: flex; flex-direction: column; gap: 1.5rem; }
+  .field-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
   label span.req { color: var(--gold); margin-left: 2px; }
-
-  input[type="text"], input[type="file"], textarea {
-    width: 100%;
-    padding: 0.75rem 0.9rem;
-    background: #fff;
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: var(--ink);
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  input:focus, textarea:focus {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(184,147,90,0.12);
-  }
-
-  textarea {
-    resize: vertical;
-    min-height: 90px;
-    line-height: 1.6;
-  }
-
-  .recorder-card {
-    background: #fff;
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.75rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.1rem;
-  }
-
-  .recorder-hint {
-    font-size: 0.8rem;
-    color: var(--ink-muted);
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  .rec-button {
-    width: 78px;
-    height: 78px;
-    border-radius: 50%;
-    border: 1px solid var(--gold);
-    background: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    position: relative;
-    flex-shrink: 0;
-  }
-
+  input[type="text"], input[type="file"], textarea { width: 100%; padding: 0.75rem 0.9rem; background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius); font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--ink); outline: none; transition: border-color 0.2s; }
+  input:focus, textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,147,90,0.12); }
+  textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+  .recorder-card { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.75rem 1.25rem; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+  .recorder-hint { font-size: 0.8rem; color: var(--ink-muted); text-align: center; line-height: 1.5; }
+  .rec-button { width: 78px; height: 78px; border-radius: 50%; border: 1px solid var(--gold); background: var(--cream); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; position: relative; flex-shrink: 0; }
   .rec-button:active { transform: scale(0.96); }
-
-  .rec-button .dot {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--rec-red);
-    transition: border-radius 0.2s, transform 0.2s;
-  }
-
-  .rec-button.recording {
-    background: rgba(184,80,80,0.08);
-    border-color: var(--rec-red);
-    animation: pulse-ring 1.6s ease-out infinite;
-  }
-
-  .rec-button.recording .dot {
-    border-radius: 6px;
-    transform: scale(0.85);
-  }
-
-  @keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 rgba(184,80,80,0.25); }
-    70% { box-shadow: 0 0 0 14px rgba(184,80,80,0); }
-    100% { box-shadow: 0 0 0 0 rgba(184,80,80,0); }
-  }
-
-  .rec-status {
-    font-size: 0.78rem;
-    color: var(--ink-soft);
-    letter-spacing: 0.04em;
-    min-height: 1.1em;
-  }
-
-  .rec-status.recording-text {
-    color: var(--rec-red);
-    font-weight: 500;
-  }
-
-  .rec-timer {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--ink);
-    letter-spacing: 0.04em;
-    min-height: 1.4em;
-  }
-
-  .playback-row {
-    display: none;
-    width: 100%;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .playback-row audio {
-    flex: 1;
-    height: 36px;
-  }
-
-  .redo-link {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gold-dark);
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: var(--gold-light);
-    white-space: nowrap;
-  }
-
-  .mic-error {
-    display: none;
-    font-size: 0.75rem;
-    color: var(--rec-red);
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  #photo-preview {
-    margin-top: 0.75rem;
-    display: none;
-  }
-
-  #preview-img {
-    max-width: 100%;
-    border-radius: var(--radius);
-    border: 0.5px solid var(--border);
-  }
-
-  #remove-photo-btn {
-    margin-top: 0.5rem;
-    width: 100%;
-    padding: 0.5rem;
-    background: var(--gold-dark);
-    color: #FAF7F2;
-    border: none;
-    border-radius: var(--radius);
-    cursor: pointer;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .submit-btn {
-    width: 100%;
-    padding: 1rem;
-    background: var(--gold-dark);
-    color: #FAF7F2;
-    border: none;
-    border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s, opacity 0.2s;
-    margin-top: 0.5rem;
-  }
-
+  .rec-button .dot { width: 26px; height: 26px; border-radius: 50%; background: var(--rec-red); transition: border-radius 0.2s, transform 0.2s; }
+  .rec-button.recording { background: rgba(184,80,80,0.08); border-color: var(--rec-red); animation: pulse-ring 1.6s ease-out infinite; }
+  .rec-button.recording .dot { border-radius: 6px; transform: scale(0.85); }
+  @keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(184,80,80,0.25); } 70% { box-shadow: 0 0 0 14px rgba(184,80,80,0); } 100% { box-shadow: 0 0 0 0 rgba(184,80,80,0); } }
+  .rec-status { font-size: 0.78rem; color: var(--ink-soft); letter-spacing: 0.04em; min-height: 1.1em; }
+  .rec-status.recording-text { color: var(--rec-red); font-weight: 500; }
+  .rec-timer { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--ink); letter-spacing: 0.04em; min-height: 1.4em; }
+  .playback-row { display: none; width: 100%; align-items: center; gap: 0.75rem; margin-top: 0.25rem; }
+  .playback-row audio { flex: 1; height: 36px; }
+  .redo-link { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dark); background: none; border: none; cursor: pointer; text-decoration: underline; text-decoration-color: var(--gold-light); white-space: nowrap; }
+  .mic-error { display: none; font-size: 0.75rem; color: var(--rec-red); text-align: center; line-height: 1.5; }
+  #photo-preview { margin-top: 0.75rem; display: none; }
+  #preview-img { max-width: 100%; border-radius: var(--radius); border: 0.5px solid var(--border); }
+  #remove-photo-btn { margin-top: 0.5rem; width: 100%; padding: 0.5rem; background: var(--gold-dark); color: #FAF7F2; border: none; border-radius: var(--radius); cursor: pointer; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+  .submit-btn { width: 100%; padding: 1rem; background: var(--gold-dark); color: #FAF7F2; border: none; border-radius: var(--radius); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, transform 0.1s, opacity 0.2s; margin-top: 0.5rem; }
   .submit-btn:hover { background: var(--gold); }
   .submit-btn:active { transform: scale(0.99); }
   .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  .note {
-    font-size: 0.75rem;
-    color: var(--ink-muted);
-    line-height: 1.6;
-    text-align: center;
-  }
-
-  .success-msg {
-    display: none;
-    text-align: center;
-    padding: 3rem 1.5rem;
-    background: #fff;
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius);
-  }
-
-  .success-msg h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: 2rem;
-    color: var(--gold-dark);
-    margin-bottom: 0.75rem;
-  }
-
-  .success-msg p {
-    font-size: 0.9rem;
-    color: var(--ink-soft);
-    line-height: 1.7;
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 0.7rem;
-    color: var(--ink-muted);
-    letter-spacing: 0.08em;
-  }
+  .note { font-size: 0.75rem; color: var(--ink-muted); line-height: 1.6; text-align: center; }
+  .success-msg { display: none; text-align: center; padding: 3rem 1.5rem; background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius); }
+  .success-msg h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 2rem; color: var(--gold-dark); margin-bottom: 0.75rem; }
+  .success-msg p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.7; }
+  footer { text-align: center; margin-top: 3rem; font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.08em; }
 </style>
 </head>
 <body>
 <div class="wrapper">
-
   <header>
     <p class="eyebrow">Livre d'or</p>
     <h1>Naomi <em>&</em> Yoann</h1>
     <p class="subtitle">10 novembre 2026 — Paris</p>
   </header>
-
   <p class="intro-text">Laissez-nous un mot, un souvenir, ou simplement votre voix.<br>Chaque message restera précieux à nos yeux.</p>
-
   <form id="guestbook-form" novalidate>
-
     <div class="field-group">
       <label>Votre nom <span class="req">*</span></label>
       <input type="text" name="name" placeholder="Prénom et nom" required>
     </div>
-
     <div class="divider">Message vocal</div>
-
     <div class="recorder-card">
       <p class="recorder-hint" id="recorder-hint">Appuyez pour enregistrer un mot doux<br>aux mariés</p>
-
       <button type="button" class="rec-button" id="rec-button" aria-label="Enregistrer">
         <div class="dot"></div>
       </button>
-
       <p class="rec-status" id="rec-status"></p>
       <p class="rec-timer" id="rec-timer"></p>
-
       <div class="playback-row" id="playback-row">
         <audio id="audio-playback" controls></audio>
         <button type="button" class="redo-link" id="redo-btn">Refaire</button>
       </div>
-
-      <p class="mic-error" id="mic-error">Le microphone n'est pas accessible. Vérifiez les autorisations de votre navigateur, ou laissez simplement un message écrit ci-dessous.</p>
+      <p class="mic-error" id="mic-error">Le microphone n'est pas accessible. Vérifiez les autorisations de votre navigateur.</p>
     </div>
-
     <div class="divider">Photo (optionnelle)</div>
-
     <div class="field-group">
       <label>Partagez un moment</label>
       <input type="file" name="photo" id="photo-input" accept="image/*">
@@ -398,27 +95,19 @@
         <button type="button" id="remove-photo-btn">Supprimer la photo</button>
       </div>
     </div>
-
     <div class="divider">Message écrit (optionnel)</div>
-
     <div class="field-group">
       <label>Un mot pour les mariés</label>
       <textarea name="notes" placeholder="Votre message…"></textarea>
     </div>
-
     <button type="submit" class="submit-btn" id="submit-btn">Envoyer mon message</button>
-
     <p class="note">Votre message sera conservé et précieusement gardé<br>par Yoann & Naomi.</p>
-
   </form>
-
   <div class="success-msg" id="success-msg">
     <h2>Merci infiniment !</h2>
     <p>Votre message a bien été enregistré.<br>Il rejoint notre livre d'or<br>et nous touchera pour toujours.</p>
   </div>
-
   <footer>Naomi &amp; Yoann · 10.11.2026</footer>
-
 </div>
 
 <script>
@@ -433,6 +122,7 @@ let timerInterval = null;
 let seconds = 0;
 let isRecording = false;
 let selectedPhoto = null;
+let recordedMimeType = 'audio/mp4';
 
 const recButton = document.getElementById('rec-button');
 const recStatus = document.getElementById('rec-status');
@@ -469,18 +159,30 @@ function resetRecorderUI() {
 async function startRecording() {
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    mediaRecorder = new MediaRecorder(stream);
+
+    // Détecte le meilleur format audio selon le navigateur
+    if (MediaRecorder.isTypeSupported('audio/mp4')) {
+      recordedMimeType = 'audio/mp4';
+    } else if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
+      recordedMimeType = 'audio/webm;codecs=opus';
+    } else if (MediaRecorder.isTypeSupported('audio/webm')) {
+      recordedMimeType = 'audio/webm';
+    } else {
+      recordedMimeType = 'audio/ogg';
+    }
+
+    mediaRecorder = new MediaRecorder(stream, { mimeType: recordedMimeType });
     audioChunks = [];
 
     mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data);
     mediaRecorder.onstop = () => {
-      audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+      audioBlob = new Blob(audioChunks, { type: recordedMimeType });
       audioUrl = URL.createObjectURL(audioBlob);
       audioPlayback.src = audioUrl;
       playbackRow.style.display = 'flex';
       recButton.style.display = 'none';
       recorderHint.style.display = 'none';
-      recStatus.textContent = 'Enregistrement terminé';
+      recStatus.textContent = 'Enregistrement terminé ✓';
       recStatus.classList.remove('recording-text');
       recTimer.textContent = formatTime(seconds);
       stream.getTracks().forEach(t => t.stop());
@@ -565,9 +267,7 @@ function audioToBase64(blob) {
 function photoToBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onload = () => {
-      resolve(reader.result);
-    };
+    reader.onload = () => { resolve(reader.result); };
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
@@ -575,39 +275,28 @@ function photoToBase64(file) {
 
 document.getElementById('guestbook-form').addEventListener('submit', async function(e) {
   e.preventDefault();
-  
   const form = e.target;
   const name = form.querySelector('[name="name"]').value.trim();
   const notes = form.querySelector('[name="notes"]').value.trim();
 
-  if (!name) {
-    alert('Merci d\'indiquer votre nom.');
-    return;
-  }
-
-  if (!audioBlob && !notes) {
-    alert('Merci de laisser un message vocal ou écrit.');
-    return;
-  }
+  if (!name) { alert('Merci d\'indiquer votre nom.'); return; }
+  if (!audioBlob && !notes) { alert('Merci de laisser un message vocal ou écrit.'); return; }
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Envoi en cours…';
 
   try {
     let audioBase64 = '';
-    if (audioBlob) {
-      audioBase64 = await audioToBase64(audioBlob);
-    }
+    if (audioBlob) { audioBase64 = await audioToBase64(audioBlob); }
 
     let photoBase64 = '';
-    if (selectedPhoto) {
-      photoBase64 = await photoToBase64(selectedPhoto);
-    }
+    if (selectedPhoto) { photoBase64 = await photoToBase64(selectedPhoto); }
 
     const payload = {
       name: name,
       notes: notes,
       audioBase64: audioBase64,
+      audioMimeType: recordedMimeType,
       photoBase64: photoBase64
     };
 
