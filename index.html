@@ -14,13 +14,11 @@
     --radius: 4px; --rec-red: #B85050;
   }
   body { font-family: 'Inter', sans-serif; background: #FAF7F2; color: var(--ink); min-height: 100vh; padding: 2rem 1rem 4rem; }
-  .wrapper { max-width: 560px; margin: 0 auto; position: relative; }
-  .logo-left, .logo-right { position: fixed; top: 50%; transform: translateY(-50%); width: 100px; opacity: 0.18; pointer-events: none; z-index: 0; }
-  .logo-left { left: 10px; }
-  .logo-right { right: 10px; transform: translateY(-50%) scaleX(-1); }
-  @media (max-width: 800px) { .logo-left, .logo-right { width: 60px; opacity: 0.12; } }
-  @media (max-width: 500px) { .logo-left, .logo-right { display: none; } }
-  header { text-align: center; padding: 3rem 0 2.5rem; border-bottom: 0.5px solid var(--border); margin-bottom: 2.5rem; }
+  .wrapper { max-width: 560px; margin: 0 auto; }
+  header { text-align: center; padding: 3rem 0 2.5rem; border-bottom: 0.5px solid var(--border); margin-bottom: 2.5rem; position: relative; }
+  .rose-header-left { position: absolute; left: 0; top: 50%; transform: translateY(-60%); width: 75px; opacity: 0.75; }
+  .rose-header-right { position: absolute; right: 0; top: 50%; transform: translateY(-60%) scaleX(-1); width: 75px; opacity: 0.75; }
+  .rose-bottom { display: block; margin: 1.5rem auto 0; width: 55px; opacity: 0.6; }
   .eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
   h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1.1; color: var(--ink); letter-spacing: 0.02em; margin-bottom: 0.75rem; }
   h1 em { font-style: italic; color: var(--gold-dark); }
@@ -66,10 +64,10 @@
 </style>
 </head>
 <body>
-<img src="logo.png" class="logo-left" alt="">
-<img src="logo.png" class="logo-right" alt="">
 <div class="wrapper">
   <header>
+    <img src="logo.png" class="rose-header-left" alt="">
+    <img src="logo.png" class="rose-header-right" alt="">
     <p class="eyebrow">Livre d'or</p>
     <h1>Naomi <em>&</em> Yoann</h1>
     <p class="subtitle">10 novembre 2026 — Paris</p>
@@ -110,6 +108,7 @@
     </div>
     <button type="submit" class="submit-btn" id="submit-btn">Envoyer mon message</button>
     <p class="note">Votre message sera conservé et précieusement gardé<br>par Yoann & Naomi.</p>
+    <img src="logo.png" class="rose-bottom" alt="">
   </form>
   <div class="success-msg" id="success-msg">
     <h2>Merci infiniment !</h2>
